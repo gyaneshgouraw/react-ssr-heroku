@@ -16,6 +16,6 @@ app.use('/api', api);
 
 app.use('*', serverRender);
 
-const port = 8888;
+const port = process.env.PORT || 8888;
 
 app.listen(port, () => console.log(`server started，at ${port}`));
